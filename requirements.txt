@@ -1,0 +1,5 @@
+Pillow
+requests
+Flask
+psycopg2-binary
+boto3

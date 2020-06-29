@@ -1,0 +1,19 @@
+{
+    "dev": {
+        "app_function": "app.app",
+        "aws_region": "us-east-1",
+        "profile_name": "default",
+        "project_name": "image-resize",
+        "runtime": "python3.7",
+        "s3_bucket": "zappa-nzt1mft7k",
+        "events": [{
+            "function": "app.resize_img",
+            "event_source": {
+                  "arn":  "arn:aws:sqs:us-east-1:562467770486:images_queue.fifo",
+                  "batch_size": 1,
+                  "enabled": true
+               }
+            }]
+    }
+
+}
